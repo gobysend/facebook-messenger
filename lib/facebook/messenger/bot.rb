@@ -92,6 +92,7 @@ module Facebook
         # @return pass event and object of callback class to trigger function.
         #
         def receive(payload)
+          puts payload.inspect
           callback = Facebook::Messenger::Incoming.parse(payload)
           event = Facebook::Messenger::Incoming::EVENTS.invert[callback.class]
           trigger(event.to_sym, callback)
