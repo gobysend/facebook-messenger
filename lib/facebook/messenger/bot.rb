@@ -31,6 +31,9 @@ module Facebook
         pass_thread_control
         game_play
         reaction
+        feed
+        mention
+        name
       ].freeze
 
       class << self
